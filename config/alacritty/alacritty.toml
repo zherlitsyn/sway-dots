@@ -1,0 +1,45 @@
+[window]
+decorations = "None"
+opacity = 1.0
+
+[window.padding]
+x = 12
+y = 10
+
+[font]
+size = 14
+
+[font.normal]
+#family = "Inconsolata"
+
+[colors.primary]
+background = "#1a1a1a"
+foreground = "#ffffff"
+
+[colors.cursor]
+text = "#1a1a1a"
+cursor = "#ffffff"
+
+[colors.selection]
+background = "#555555"
+text = "#ffffff"
+
+[colors.normal]
+black = "#1a1a1a"
+red = "#eb4d4b"
+green = "#4ade80"
+yellow = "#fbbf24"
+blue = "#60a5fa"
+magenta = "#c084fc"
+cyan = "#22d3ee"
+white = "#cccccc"
+
+[colors.bright]
+black = "#383838"
+red = "#f87171"
+green = "#86efac"
+yellow = "#fcd34d"
+blue = "#93c5fd"
+magenta = "#d8b4fe"
+cyan = "#67e8f9"
+white = "#ffffff"

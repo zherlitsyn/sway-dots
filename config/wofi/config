@@ -1,0 +1,8 @@
+show=drun
+width=720
+height=384
+location=center
+prompt=Приложения
+allow_images=true
+allow_markup=true
+hide_scroll=true

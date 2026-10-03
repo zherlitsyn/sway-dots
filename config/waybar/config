@@ -1,0 +1,71 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 0,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "custom/network", "custom/bluetooth", "custom/lang", "tray"],
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "sway/mode": {
+        "format": "{}"
+    },
+
+    "clock": {
+        "format": "&#xf017;  {:%Y-%m-%d %H:%M}",
+        "format-alt": "&#xf017;  {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "months": "<span color='#ffffff'><b>{}</b></span>",
+                "days": "<span color='#cccccc'>{}</span>",
+                "weeks": "<span color='#888888'><b>W{}</b></span>",
+                "weekdays": "<span color='#888888'><b>{}</b></span>",
+                "today": "<span color='#ffffff'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    "cpu": {
+        "format": "&#xf2db;  {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "&#xf538;  {percentage}%",
+        "interval": 2
+    },
+
+    "custom/network": {
+        "format": "&#xf1eb;  {}",
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/net.sh",
+        "on-click": "nm-connection-editor"
+    },
+
+    "custom/bluetooth": {
+        "format": "&#xf293;  {}",
+        "interval": 5,
+        "exec": "timeout 2 bluetoothctl show 2>/dev/null | grep -q 'Powered: yes' && echo BT || echo BT-",
+        "on-click": "blueman-manager"
+    },
+
+    "custom/lang": {
+        "format": "&#xf11c;  {}",
+        "interval": 1,
+        "exec": "~/.config/waybar/scripts/lang.sh"
+    },
+
+    "tray": {
+        "icon-size": 22,
+        "spacing": 10
+    }
+}
